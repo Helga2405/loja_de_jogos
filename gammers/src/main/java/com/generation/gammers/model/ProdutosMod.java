@@ -30,8 +30,15 @@ public class ProdutosMod {
 	@JsonIgnoreProperties("ProdutosMod")
 	public CategoriaMod categoria;
 	
+	@ManyToOne
+	@JsonIgnoreProperties("ProdutosMod")
+	public UsuarioG usuario;
+	
 	
 
+	
+
+	
 	public Long getId() {
 		return id;
 	}
@@ -63,7 +70,15 @@ public class ProdutosMod {
 	public void setCategoria(CategoriaMod categoria) {
 		this.categoria = categoria;
 	}
+	public UsuarioG getUsuario() {
+		return usuario;
+	}
 
+	public void setUsuario(UsuarioG usuario) {
+		this.usuario = usuario;
+	}
+
+	
 	
 	
 }
